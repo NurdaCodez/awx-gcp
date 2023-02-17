@@ -1,0 +1,9 @@
+---
+- name: Create and delete Apache web server
+  hosts: all
+  become: true
+  tasks:
+    - name: Remove Apache web server
+      apt:
+        name: apache2
+        state: absent
